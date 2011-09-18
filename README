@@ -1,0 +1,18 @@
+ChaosMonkey
+
+When working with webservices locally you never experience fail, the network
+is snappy and everything is a breeze. Then you move it into production...
+
+To ensure you cover every possibility while working with code you need a 
+ChaosMonkey at your disposal. This particular ChaosMonkey now works with the 
+Slim Framework, but should be easy to extend to work with other frameworks.
+
+The ChaosMonkey_AbsoluteChaos will (randomly) run sleep(), die(), exit(), output garbage 
+or throw a Exception to make sure you cover different scenario in the user
+interface. This makes it perfect while developing REST services locally to make 
+sure your interface is covering these pitfalls that you normally wouldn't catch 
+if everything runs smooth on every request.
+
+See the example.php for how to inject the ChaosMonkey into the Slim framework
+
+Inspired by http://techblog.netflix.com/2010/12/5-lessons-weve-learned-using-aws.html
