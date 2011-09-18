@@ -46,7 +46,7 @@ class ChaosMonkey_Slim implements ChaosMonkey {
 	     * Interference can happen before, after, during execution
 	     * and will create different behaviour each time
 	     */
-	    $this->slim->hook( $hook, function() use ($chaos) {		
+	    $this->getSlim()->hook( $hook, function() use ($chaos) {		
 		$chaos->interfere();
 	    });
 	}	
